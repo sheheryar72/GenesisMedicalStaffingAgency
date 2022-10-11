@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Nursing Staffing Services";
+    Layout = "~/Views/Home/_LayoutPage1.cshtml";
+}
+<style>
+    .navbar-expand-lg .navbar-nav .nav-link {
+    color: #000;
+}
+img#ourteamimg {
+    width: 55%;
+}
+p#teamparagraph {
+    font-size: 16px;
+    margin-top: 2%;
+}
+
+</style>
+<!-- about breadcrumb -->
+<section class="w3l-about-breadcrumb position-relative">
+                
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        @*<div id="medprofimg" class="text-center" style="margin-top: 5%">
+        <img  src="~/images/nursestaffserv2.jpg" id="workwithusid"/>
+        </div>*@
+
+        <img src="~/images/nursestaffserv2.jpg" class="img-fluid" alt="Responsive image">
+
+        <div class="container py-lg-5 py-3">
+            <h2 class="title text-center">Genesis Staffing Services</h2>
+            <h3 class="title text-center" id="interestedid"  style="color: #2761d4; margin-top:3%">Interested in Working with Genesis Staffing Agency?</h3>
+            <p id="workwith1" style="margin-top:3%">
+           Whenever you need a nurse, no matter what the reason, you can count on Genesis Staffing Agency to provide you with experienced and 
+           credentialed healthcare personnel. We pride ourselves on delivering outstanding nursing professionals for medical facilities, 
+           private duty services within facilities and private duty home care.<br />
+        </p>
+        <p id="workwith2" style="margin-top:4%">
+           When you need staffing help on a per diem, long or short term contract, temp-to-perm or direct hire basis, give us a call. 
+           You’ll find us easy and pleasant to work with. We strive for personal service and a quick response to your requests and questions.
+        </p>
+
+        <h3 style="color: #2761d4; margin-top:4%">
+            Quality Nursing Staff You Can Depend On
+        </h3>
+        <p id="workwith2" style="margin-top:4%">
+          Our employees represent us. Therefore, we comprehensively screen each and every individual who works for us, thoroughly checking 
+          their background and credentials. We handle employment needs of all kind. If you are looking for a healthcare worker for your
+          home or business, contact Genesis Staffing Agency immediately!
+        </p>
+         <p id="workwith2" style="margin-top:4%">
+          Our aim is to deliver outstanding care in all dimensions. Our staff and our employees provide first-rate clinical services 
+          given in an effective and integrated way. As with our company and our staff, we have a high regard in pleasing people.
+        </p>
+
+        <p id="workwith2" style="margin-top:4%">
+          We offer a comprehensive scope of healthcare services with a broad range of services for your nursing vacancies, such as:
+          <div style="margin-top:2%">
+          <ul>- Facility and home healthcare staffing</ul>
+          <ul>- Medication Techs</ul>
+          <ul>- RNs</ul>
+          <ul>- LPNs</ul>
+          <ul>- CNAs</ul>
+          </div>
+        </p>
+        <p id="workwith2" style="margin-top:4%">
+          Our nursing agency recruits and retains nursing professionals for medical facilities nationwide. We place registered Genesis (RNs), 
+          licensed practical Genesis (LPNs), licensed vocational Genesis (LVNs), and certified nursing assistants (CNAs) in a variety of 
+          facility shifts, including per diem, contract, temp-to-perm, and direct hire placement.
+        </p>
+        <h2 style="color: #2761d4; margin-top:4%">
+            Contact us today to learn how we can help you manage your staffing needs.
+        </h2>
+        </div>
+    </div>
+    
+</section>
+<!-- //about breadcrumb -->
+
+    
+<!-- Template JavaScript -->
+<script src="~/js/jquery-3.3.1.min.js"></script>
+<script src="~/js/theme-change.js"></script>
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+<!--/MENU-JS-->
+<script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+</script>

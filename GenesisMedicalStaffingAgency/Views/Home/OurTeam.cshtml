@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "Our Team";
+    Layout = "~/Views/Home/_LayoutPage1.cshtml";
+}
+<style>
+    .navbar-expand-lg .navbar-nav .nav-link {
+    color: #000;
+}
+img#ourteamimg {
+    width: 55%;
+}
+p#teamparagraph {
+    font-size: 16px;
+    margin-top: 2%;
+}
+
+
+</style>
+<!-- about breadcrumb -->
+<section class="w3l-about-breadcrumb position-relative">
+                
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        <div id="medprofimg" class="text-center" style="margin-top: 5%">
+        <img  src="~/images/team33.jpg" id="ourteamimg"/>
+        </div>
+
+        <div class="container py-lg-5 py-3">
+            <h2 class="title text-center">About Us</h2>
+            <p id="teamparagraph">
+            Genesis Staffing Agency Nursing Staffing Agency is a limited liability company established in Harrisburg, Pennsylvania June 21st, 2018 
+            with the objective of providing contract or referral based staffing services to reputable organizations. We have expanded and now 
+            have a location in Mcleansville, North Carolina. Genesis Staffing Agency is managed by a group of dynamic professionals committed to meeting 
+            your staffing needs. Our approach to staffing is unique. Genesis Staffing Agency takes a customized approach to every account and strive to 
+            fully understand the business of our clients. We also provide one on one private duty care to individuals that need more care and 
+            help with the activities of daily living. Our approach to our one on one clients is to help them maintain as much function of their 
+            daily lives as possible.<br />
+            We consider the following as the critical success factors for the provision of sustainable services:• Partnership
+            <ul>
+            <li>- Commitment</li>
+            <li>- Excellence</li>
+            <li>- Flexibility</li>
+            <li>- Competitive</li>
+        </ul>
+        </p>
+
+        </div>
+        
+        
+    </div>
+    
+</section>
+<!-- //about breadcrumb -->
+
+<!-- //content-6-->
+<!-- /w3l-content-4 -->
+<section class="w3l-content-4">
+    <!-- /content-6-section -->
+    <div class="content-4-main py-5">
+        <div class="container py-lg-4">
+            <div class="content-info-in row">
+
+                <div class="content-right col-lg-6">
+                    <img src="~/images/team22.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="content-left col-lg-6 pl-lg-5">
+                    <h6 class="sub-title">
+                        Reable Features
+                    </h6>
+                    <h3 class="hny-title">
+                        What Can We Do For You?
+                    </h3>
+                    <p class="mt-3">
+                       Quality Staffing Network is more than a staffing agency. It’s a movement that reinvents the industry, and leverages a 
+                       network of nursing professionals, healthcare facilities and innovative entrepreneurs. QSN has built a track record of 
+                       providing top-notch staffing solutions. We have launched 300 healthcare staffing firms and filled thousands of nursing 
+                       hours. Because of our proprietary business model, we can work more closely with our clients than most firms.
+                    </p>
+
+                    <div class="content-4-bottom">
+                        <div class="content4-right-grids mb-md-0 mb-4">
+
+                            <div class="content4-right-info">
+                                <h6><a href="#">Our Stories</a></h6>
+                                <p>Genesis Staffing Agency Nursing Staffing Agency is a limited liability company established in Harrisburg,</p>
+                            </div>
+
+                        </div>
+                        <div class="content4-right-grids mb-md-0 mb-4">
+
+                            <div class="content4-right-info">
+                                <h6><a href="#">Our Mission</a></h6>
+                                <p>Our mission is to be the staffing provider and employer of choice by helping people and companies achieve their goals.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //content-6-section -->
+
+
+<!-- Template JavaScript -->
+<script src="~/js/jquery-3.3.1.min.js"></script>
+<script src="~/js/theme-change.js"></script>
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+<!--/MENU-JS-->
+<script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+</script>

@@ -1,0 +1,177 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+@model List<GenesisMedicalStaffingAgency.Models.Jobs>
+@{
+    ViewBag.Title = "Current Job Openings";
+    Layout = "~/Views/Home/_LayoutPage1.cshtml";
+}
+<style>
+    .navbar-expand-lg .navbar-nav .nav-link {
+    color: #000;
+}
+img#ourteamimg {
+    width: 55%;
+}
+p#teamparagraph {
+    font-size: 16px;
+    margin-top: 2%;
+}
+
+/*job card list*/
+
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.5rem 1.5rem;
+}
+.avatar-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+}
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+}
+.rounded-3 {
+    border-radius: 0.5rem!important;
+}
+.mb-2 {
+    margin-bottom: 0.5rem!important;
+}
+.me-4 {
+    margin-right: 1.5rem!important;
+}
+
+</style>
+<!-- about breadcrumb -->
+<section class="w3l-about-breadcrumb position-relative">
+                
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        
+        @*<div id="medprofimg" class="text-center" style="margin-top: 5%">
+        <img  src="~/images/bannerimg.png" id="workwithusid"/>
+        </div>*@
+
+        <img src="~/images/bannerimg.png" class="img-fluid" alt="Responsive image">
+
+        <div class="container py-lg-5 py-3">
+            <h2 class="title text-center">Career</h2>
+            <h3 class="title text-center" id="interestedid"  style="color: #2761d4; margin-top:3%">Interested in Working with Genesis Staffing Agency?</h3>
+            <p id="workwith1" style="margin-top:3%" class="text-center">
+          Below is a list our current openings. Please click on each listing for more information or to apply.
+          <br/>We currently have no job openings
+        </p>
+
+
+        </div>
+    </div>
+    
+</section>
+<!-- //about breadcrumb -->
+
+<section>
+    <div class="container">
+    <div class="text-center mb-5">
+      <h3>Jobs openning</h3>
+      <p class="lead">Apply For a Job</p>
+    </div>
+
+    @foreach(var item in Model){
+        <div class="card mb-3">
+      <div class="card-body">
+        <div class="d-flex flex-column flex-lg-row">
+          <span class="avatar avatar-text rounded-3 me-4 mb-2">FD</span>
+          <div class="row flex-fill">
+            <div class="col-sm-5">
+              <h4 class="h5">@item.Title</h4>
+              <span class="badge bg-secondary">@item.Country</span> <span class="badge bg-success">@item.Salary</span>
+            </div>
+            <div class="col-sm-4 py-2">
+              <span class="badge bg-secondary">@item.Tags</span>
+            </div>
+            <div class="col-sm-3 text-lg-end">
+              <a href="/Home/EmploymentApplication?Id=@item.Id" class="btn btn-primary stretched-link">Apply</a>
+            @if (@Accessor.HttpContext.Session.GetString("IsUserLoggedIn") != null)
+            {
+              <a href="/Home/DeleteJob?Id=@item.Id" class="btn btn-primary stretched-link">Delete</a>
+              
+              <a href="/Home/EditJobById?Id=@item.Id" class="btn btn-primary stretched-link">Edit</a>
+            }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+    
+  </div>
+</section>
+
+    
+<!-- Template JavaScript -->
+<script src="~/js/jquery-3.3.1.min.js"></script>
+<script src="~/js/theme-change.js"></script>
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+<!--/MENU-JS-->
+<script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+</script>

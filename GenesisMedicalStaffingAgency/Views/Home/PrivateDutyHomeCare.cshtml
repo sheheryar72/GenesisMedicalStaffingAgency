@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Private Duty Home Care";
+    Layout = "~/Views/Home/_LayoutPage1.cshtml";
+}
+<style>
+    .navbar-expand-lg .navbar-nav .nav-link {
+    color: #000;
+}
+img#ourteamimg {
+    width: 55%;
+}
+p#teamparagraph {
+    font-size: 16px;
+    margin-top: 2%;
+}
+
+
+</style>
+<!-- about breadcrumb -->
+<section class="w3l-about-breadcrumb position-relative">
+                
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        
+        @*<div id="medprofimg" class="text-center" style="margin-top: 5%">
+        <img  src="~/images/privatenurse.jpg" id="workwithusid"/>
+        </div>*@
+
+        <img src="~/images/privatenurse.jpg" class="img-fluid" alt="Responsive image">
+
+        <div class="container py-lg-5 py-3">
+            <h2 class="title text-center">Private Duty Home Care</h2>
+            <h3 class="title text-center" id="interestedid"  style="color: #2761d4; margin-top:3%">Interested in Working with Genesis Staffing Agency?</h3>
+            <p id="workwith1" style="margin-top:3%">
+           Private duty home care is a service provided to individuals who are in need of assistance with day-to-day activities. 
+           A private duty home caregiver visits your home or the home of your loved one and helps with activities such as meal 
+           preparation, housekeeping, and personal grooming and hygiene.<br />
+        </p>
+        <h3 style="color: #2761d4; margin-top:4%">
+            Home Health Care You Can Depend On
+        </h3>
+        <p id="workwith2" style="margin-top:4%">
+          We believe in treating our clients with the utmost professionalism and giving them personal and professional home healthcare 
+          with comfort and honor. We know that our clients want to be independent and are used to it. Our healthcare employees go 
+          the extra mile in giving them the level of service so they receive the help they need without robbing them of their 
+          self-confidence. If long-term medical assistance is required, everyone involved will participate in creating a healthcare 
+          plan that provides the necessary help.
+        </p>
+
+        <h3 style="color: #2761d4; margin-top:4%">
+            Professional, Caring Help When You Need It
+        </h3>
+        <p id="workwith2" style="margin-top:4%">
+          Our educated and trained healthcare professionals perform such tasks as monitoring medicine, preparing meals, and arranging doctor 
+          appointments. We want to be the nursing staffing agency and healthcare provider who you rely and depend on. We can accommodate 
+          your last minute, same day need for a nurse. If you are looking for an affordable healthcare employment company that provides 
+          quality service, try Genesis Staffing Agency.
+        </p>
+         <p id="workwith2" style="margin-top:4%">
+          OUR PRIVATE DUTY SERVICE IS A PRIVATE PAY SERVICE, WE DO NOT ACCEPT INSURANCE AT THIS PRESENT TIME. RATES FURNISHED UPON REQUEST
+        </p>
+
+        <h2 style="color: #2761d4; margin-top:4%">
+            Contact us today to learn how we can help you manage your staffing needs.
+        </h2>
+        </div>
+    </div>
+    
+</section>
+<!-- //about breadcrumb -->
+
+    
+<!-- Template JavaScript -->
+<script src="~/js/jquery-3.3.1.min.js"></script>
+<script src="~/js/theme-change.js"></script>
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+<!--/MENU-JS-->
+<script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+</script>

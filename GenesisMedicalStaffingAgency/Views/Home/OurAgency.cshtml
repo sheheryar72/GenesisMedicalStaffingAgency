@@ -1,0 +1,167 @@
+﻿
+@{
+    ViewBag.Title = "Agency";
+    Layout = "~/Views/Home/_LayoutPage1.cshtml";
+}
+<style>
+    .navbar-expand-lg .navbar-nav .nav-link {
+    color: #000;
+}
+img#ourteamimg {
+    width: 55%;
+}
+p#teamparagraph {
+    font-size: 16px;
+    margin-top: 2%;
+</style>
+<!-- about breadcrumb -->
+
+<section class="w3l-about-breadcrumb position-relative">
+                
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        <div id="medprofimg" class="text-center" style="margin-top: 5%">
+        <img  src="~/images/team22.jpg" id="ourteamimg"/>
+        </div>
+
+        <div class="container py-lg-5 py-3">
+            <h2 class="title text-center">Our Team</h2>
+            <p id="teamparagraph">
+            Genesis Staffing Agency was incorporated by LeQuitha Simmons, RN. Ms. Simmons was born and raised in Harrisburg, Pa. She is a United States 
+            Army Veteran. She served our country in Talil Airforce Base, Iraq during the war “Iraqi Freedom”. Stationed in various places such 
+            as Korea, Fort Lee Virginia and Fort Benning, Georgia. After discharging honorably from the military, she attended nursing school 
+            at Lancaster General College, Located in Lancaster, Pa. She obtained her RN degree in May 2015. Ms. Simmons started traveling the 
+            world as a registered nurse, in various states. Eventually she branched out on her own in June 2018 and founded her own nursing 
+            staffing agency in Pennsylvania, North Carolina, and South Carolina.
+        </p>
+        </div>
+    </div>
+</section>
+<!-- //about breadcrumb -->
+
+<!-- team -->
+<section class="w3l-team-main py-5" id="team">
+    <div class="container py-lg-4">
+        <div class="title-content text-center mb-lg-5 mb-4">
+            <h6 class="sub-title">Our Technicians</h6>
+            <h3 class="hny-title">Meet Our Team</h3>
+        </div>
+        <div class="row inner-sec-w3layouts-w3pvt-lauinfo">
+            <div class="col-md-3 col-6">
+                <div class="team-grids text-center">
+                    <img src="~/images/nurse1.png" class="img-fluid" alt="">
+                    <div class="team-info">
+                        <div class="caption">
+                            <h4>Dan Jones</h4>
+                            <h6>Technician</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icons-section text-center">
+                    <a class="fac" href="#url">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="twitter" href="#url">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="team-grids text-center">
+                    <img src="~/images/nurse2.png" class="img-fluid" alt="">
+                    <div class="team-info">
+                        <div class="caption">
+                            <h4>Zara Conner</h4>
+                            <h6>Technician</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icons-section text-center">
+                    <a class="fac" href="#url">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="twitter" href="#url">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mt-md-0 mt-4">
+                <div class="team-grids text-center">
+                    <img src="~/images/nurse3.png" class="img-fluid" alt="">
+                    <div class="team-info">
+                        <div class="caption">
+                            <h4>John Chater</h4>
+                            <h6>Technician</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icons-section text-center">
+                    <a class="fac" href="#url">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="twitter" href="#url">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mt-md-0 mt-4">
+                <div class="team-grids text-center">
+                    <img src="~/images/nurse4.png" class="img-fluid" alt="">
+                    <div class="team-info">
+                        <div class="caption">
+                            <h4>June Smith</h4>
+                            <h6>Technician</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icons-section text-center">
+                    <a class="fac" href="#url">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="twitter" href="#url">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- team -->
+<!-- Template JavaScript -->
+<script src="~/js/jquery-3.3.1.min.js"></script>
+<script src="~/js/theme-change.js"></script>
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+<!--/MENU-JS-->
+<script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+</script>
